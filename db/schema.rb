@@ -11,7 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150701203131) do
+ActiveRecord::Schema.define(version: 20150706163504) do
+
+  create_table "campaigns", force: true do |t|
+    t.integer  "original_amount_pledged"
+    t.integer  "amount_contributed"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "status"
+    t.integer  "campaigner_id"
+    t.integer  "beneficiary_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contributions", force: true do |t|
+    t.integer  "amount"
+    t.integer  "campaign_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "friendships", id: false, force: true do |t|
+    t.integer "user_id",   null: false
+    t.integer "friend_id", null: false
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -29,6 +54,10 @@ ActiveRecord::Schema.define(version: 20150701203131) do
     t.string   "provider"
     t.string   "uid"
     t.string   "birthday"
+    t.string   "oauth_token"
+    t.string   "name"
+    t.string   "oauth_expires_at"
+    t.string   "image_url"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

@@ -13,10 +13,10 @@
 	<%=link_to 'Login', new_user_session_path%>
 	<%=link_to 'facebook sign',user_omniauth_authorize_path(:facebook)%>
 	<% if user_signed_in?%>	
-	Logged in as <strong><%= current_user.email%></strong>
-		<p class="notice"><%= notice %></p>
-	<p class="alert"><%= alert %></p>
+		Logged in as <strong><%= current_user.email%></strong>
 	<%end%>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 <%= yield %>
 
 </body>

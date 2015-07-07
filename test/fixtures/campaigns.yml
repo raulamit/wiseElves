@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  original_amount_pledged: 1
+  amount_contributed: 1
+  start_date: 2015-07-06
+  end_date: 2015-07-06
+  status: MyString
+
+two:
+  original_amount_pledged: 1
+  amount_contributed: 1
+  start_date: 2015-07-06
+  end_date: 2015-07-06
+  status: MyString

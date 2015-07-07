@@ -1,1 +1,14 @@
-<h1> hello index page</h1>
+<%if user_signed_in? %>
+<h1> hello <%=current_user.name %></h1></br>
+<%=current_user.email%></br>
+Your birthday is on <%=current_user.birthday%></br>
+<img alt="<%=current_user.name%>" src="<%=current_user.image_url%>" height="48" width="48"></br>
+
+<h2> Your Friends </h2>
+<%current_user.users.each do |u|%>
+Hi <%=u.name%> <img alt="<%=u.name%>" src="<%=u.image_url%>" height="48" width="48"></br>
+<%"hello world"%>
+<%end%>
+<%else%>
+Please sign in
+<%end%>
