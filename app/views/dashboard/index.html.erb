@@ -1,3 +1,4 @@
+<section>
 <%if user_signed_in? %>
 <h1> hello <%=current_user.name %></h1></br>
 <%=current_user.email%></br>
@@ -12,3 +13,4 @@ Hi <%=u.name%> <img alt="<%=u.name%>" src="<%=u.image_url%>" height="48" width="
 <%else%>
 Please sign in
 <%end%>
+</section>

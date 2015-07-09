@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
 
    root 'welcome#index'
-
+   get '/home' => 'dashboard#index', :as => "dasboard_home"
    get 'users/:id' => 'dashboard#show'
    post 'users/:id/new_campaign' => 'campaign#new'
    post 'users/:id/edit_campaign' => 'campaign#edit'
