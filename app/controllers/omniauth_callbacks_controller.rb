@@ -5,6 +5,8 @@ def all
 	if user.persisted?
 		sign_in_and_redirect user, notice: "Signed In!!"
 		user.save_friends(user)
+		# redirect_to(:controller => 'welcome', :action => 'index')
+
 	# elsif user.exist(user.uid)
 	# 	current_user=user
 	# 	sign_in_and_redirect user, notice: "Signed In!!"

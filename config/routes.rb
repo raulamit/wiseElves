@@ -1,11 +1,28 @@
 Rails.application.routes.draw do
+  get 'campaign/new'
+
+  get 'campaign/show'
+
+  get 'campaign/stop'
+
+  get 'campaign/edit'
+
   devise_for :users, path_names: {sign_in: "login", sign_out: "logout"},
   controllers: {omniauth_callbacks: "omniauth_callbacks"}
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+
    root 'welcome#index'
+
+   get 'users/:id' => 'dashboard#show'
+   post 'users/:id/new_campaign' => 'campaign#new'
+   post 'users/:id/edit_campaign' => 'campaign#edit'
+   get 'users/:id/campaign' => 'campaign#show'
+   post 'users/:id/stop_campaign' => 'campaign#stop'
+   
+   # get 'users' to: 'dashboard#show' as: :this_user
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

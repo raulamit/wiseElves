@@ -1,0 +1,9 @@
+hi <%=@search_user.name%>
+<br>
+<form action="<%=params[:id]%>/new_campaign" method="post">
+	<label> campaign target :  </label>
+	<input type="text" value="" name="campaign[original_amount_pledged]"/> Rs.<br>
+	<label> your Contribution :  </label>
+	<input type="text" value"" name="campaign[amount_contributed]"/> Rs.<br>
+	<input type="submit" name="commit" value="Start campaign"/>
+</form>	

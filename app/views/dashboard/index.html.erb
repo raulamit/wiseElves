@@ -1,7 +1,3 @@
-<h1> Hello this is the home page </h1>
-
-<br>
-<br>
 <%if user_signed_in? %>
 <h1> hello <%=current_user.name %></h1></br>
 <%=current_user.email%></br>
@@ -10,7 +6,7 @@ Your birthday is on <%=current_user.birthday%></br>
 
 <h2> Your Friends </h2>
 <%current_user.users.each do |u|%>
-Hi <a href="users/<%=u.id%>"><%=u.name%></a> <img alt="<%=u.name%>" src="<%=u.image_url%>" height="48" width="48"></br>
+Hi <%=u.name%> <img alt="<%=u.name%>" src="<%=u.image_url%>" height="48" width="48"></br>
 
 <%end%>
 <%else%>
