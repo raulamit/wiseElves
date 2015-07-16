@@ -1,5 +1,6 @@
 class CampaignController < ApplicationController
   skip_before_action :verify_authenticity_token
+  layout false
   def new
   	campaign= Campaign.new(:original_amount_pledged => params[:original_amount_pledged],
   		:amount_contributed => params[:amount_contributed],

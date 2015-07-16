@@ -1,16 +1,27 @@
 <section>
+<div class="row">
+  <div class="col-md-9" role="main">
 <%if user_signed_in? %>
 <h1> hello <%=current_user.name %></h1></br>
 <%=current_user.email%></br>
 Your birthday is on <%=current_user.birthday%></br>
 <img alt="<%=current_user.name%>" src="<%=current_user.image_url%>" height="48" width="48"></br>
-
 <h2> Your Friends </h2>
 <%current_user.users.each do |u|%>
 Hi <%=u.name%> <img alt="<%=u.name%>" src="<%=u.image_url%>" height="48" width="48"></br>
-
 <%end%>
 <%else%>
 Please sign in
 <%end%>
+</div>
+<div class="col-md-3" role="complementary">
+  <h2>Upcoming Birthdays
+  <%if user_signed_in? %>
+  <%current_user.users.each do |u|%>
+    <%=u.name%> <img src="<%=u.image_url%>" height="48" width="48"></br> 
+    <button class="btn btn-default" type="submit">Start Campaign</button>
+  <%end%>
+  <%end%>
+</div>
+</div>
 </section>
