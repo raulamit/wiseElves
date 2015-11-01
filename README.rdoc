@@ -1,28 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+WiseELves is a Rails4 based web app that facilitates users to collaboratively gift their facebook friends. Often people fall short of the perfect gift because of a deficiency of funds. But this app solves that problem. With the help of wiseElves you can conribute towards the gift and surprise your dear ones.
+This app enables a user to collaborate with beneficiary's friends to find the perfect gift. You can start campaigns for a friends, and contribute towards an existing campaign.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+<b>Making an effort to help the gift giving tradition thrive.</b>
